@@ -153,6 +153,10 @@ function FHJvLJ(){
       document.getElementById(cards[i]).classList.remove('rise','limp');
    }
 
+   for(var i=0; i < HJvLJ.length ; i++){
+      document.getElementById(HJvLJ[i]).classList.add('rise');
+      document.getElementById(HJvLJ[i]).classList.remove('square');
+   }
 }
 
 
