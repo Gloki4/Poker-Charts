@@ -39,7 +39,7 @@ function blind(){
 const toAdd = document.getElementById("display");
 const toAddButton = document.getElementById("buttons");
 
-
+//Tablica kart
 for(var i=0; i < 169; i++){
    var newDiv = document.createElement('div');
    newDiv.id = cards[i];
@@ -53,6 +53,7 @@ for(var i=0; i < 169; i++){
    inside.appendChild(newContent);
 }
 
+//Guziki
 for(var i=0; i < MainButtons.length; i++){
    var newButton = document.createElement('button');
    newButton.id = MainButtons[i];
@@ -64,7 +65,7 @@ for(var i=0; i < MainButtons.length; i++){
 
 }
 
-
+//Lojack first rise 
 function FLojackRFI(){
    
    for(var i=0; i < cards.length ; i++){
@@ -79,6 +80,7 @@ function FLojackRFI(){
 
 }
 
+//Hijack first rise
 function FHijackRFI(){
    
    for(var i=0; i < cards.length ; i++){
@@ -93,6 +95,7 @@ function FHijackRFI(){
 
 }
 
+//Cutoff first rise
 function FCutoffRFI(){
    
    for(var i=0; i < cards.length ; i++){
@@ -107,6 +110,7 @@ function FCutoffRFI(){
 
 }
 
+//Button first rise
 function FButtonRFI(){
    
    for(var i=0; i < cards.length ; i++){
@@ -121,6 +125,7 @@ function FButtonRFI(){
 
 }
 
+//Small Blind first rise
 function FsbRFI(){
    
    for(var i=0; i < cards.length ; i++){
@@ -139,6 +144,18 @@ function FsbRFI(){
       document.getElementById(SBRFILimp[i]).classList.remove('square');
    }
 }
+
+//Facing RFI Hijac vs Lojack
+function FHJvLJ(){
+
+   for(var i=0; i < cards.length ; i++){
+      document.getElementById(cards[i]).classList.add('square');
+      document.getElementById(cards[i]).classList.remove('rise','limp');
+   }
+
+}
+
+
 
 //funkcja od tworzenia zestawów kart
 //function arrays(duet){

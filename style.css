@@ -12,7 +12,7 @@
 }
 
 #display {
-    max-width: 600px;
+    max-width: 500px;
     margin: 10px auto;
     background-color: rgb(216, 215, 177);
     border: 2px solid black;
@@ -20,14 +20,14 @@
 }
 
 #buttons {
-    max-width: 600px;
+    max-width: 500px;
     margin: 0px auto;
     background-color: rgb(216, 215, 177);
     border: 2px solid black;
 }
 
 #buttonsRise {
-    max-width: 600px;
+    max-width: 500px;
     margin: 0px auto;
     background-color: rgb(216, 215, 177);
     border: 2px solid black;
@@ -68,11 +68,11 @@
 }
 
 .mButton {
-    height: 50px;
-    width: 14%;
+    max-height: 50px;
+    width: 14.2%;
     padding: auto;
     font-size: 25px;
-    margin: 2px 0;
+    margin: auto;
 }
 
 .rise {
@@ -115,4 +115,5 @@
     height: 100px;
     background-color: rgb(230, 109, 109);
     border: 2px solid black;
+    display: none;
 }
