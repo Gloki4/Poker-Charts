@@ -32,37 +32,45 @@ const BBvBTNLimp =["AJo", "ATo", "A9o", "A8o", "A7o", "A6o", "A5o", "A4o", "A3o"
 
 const MainButtons = ["Lojack","Hijack","Cutoff","Button","SB","BB","Next"]
 const MainButtonsFunction = ["FLojackRFI()", "FHijackRFI()", "FCutoffRFI()", "FButtonRFI()", "FsbRFI()", "FbbRFI()", "Next()"] 
-
+const RiseButtons = ["RLojack", "RHijack", "RCutoff", "RButton", "RSB"]
 //Funkcja od stworzenia pustej tablicy kart i przycisków 
 function blind(){
 
-const toAdd = document.getElementById("display");
-const toAddButton = document.getElementById("buttons");
+   const toAdd = document.getElementById("display");
+   const toAddButton = document.getElementById("buttons");
 
-//Tablica kart
-for(var i=0; i < 169; i++){
-   var newDiv = document.createElement('div');
-   newDiv.id = cards[i];
-   newDiv.className = 'square';
-   toAdd.appendChild(newDiv);
-   let inside = document.getElementById(cards[i]);
-   var newContent = document.createElement('div');
-   newContent.className = 'card';
-   newContent.innerHTML = cards[i];
-   newContent.setAttribute('onclick', 'arrays('+i+')');
-   inside.appendChild(newContent);
+   //Tablica kart
+   for(var i=0; i < 169; i++){
+      var newDiv = document.createElement('div');
+      newDiv.id = cards[i];
+      newDiv.className = 'square';
+      toAdd.appendChild(newDiv);
+      let inside = document.getElementById(cards[i]);
+      var newContent = document.createElement('div');
+      newContent.className = 'card';
+      newContent.innerHTML = cards[i];
+      newContent.setAttribute('onclick', 'arrays('+i+')');
+      inside.appendChild(newContent);
+   }
+
+   //Guziki
+   for(var i=0; i < MainButtons.length; i++){
+      var newButton = document.createElement('button');
+      newButton.id = MainButtons[i];
+      newButton.className = 'mButton';
+      newButton.innerHTML = MainButtons[i];
+      newButton.setAttribute('onclick', MainButtonsFunction[i]);
+      toAddButton.appendChild(newButton);
+   }
+
 }
 
-//Guziki
-for(var i=0; i < MainButtons.length; i++){
-   var newButton = document.createElement('button');
-   newButton.id = MainButtons[i];
-   newButton.className = 'mButton';
-   newButton.innerHTML = MainButtons[i];
-   newButton.setAttribute('onclick', MainButtonsFunction[i]);
-   toAddButton.appendChild(newButton);
-}
+function find(looking){
+   const find = document.getElementById(looking);
 
+   if(find = null){
+      
+   }
 }
 
 //Lojack first rise 
@@ -83,6 +91,8 @@ function FLojackRFI(){
 //Hijack first rise
 function FHijackRFI(){
    
+   const toAddButton = document.getElementById("buttonsRise");
+
    for(var i=0; i < cards.length ; i++){
       document.getElementById(cards[i]).classList.add('square');
       document.getElementById(cards[i]).classList.remove('rise','limp');
@@ -93,6 +103,15 @@ function FHijackRFI(){
       document.getElementById(HijackRFI[i]).classList.remove('square');
    }
 
+   
+   if ()
+   var newButton = document.createElement('button');
+   newButton.id = RiseButtons[0];
+   newButton.className = 'mButton';
+   newButton.innerHTML = RiseButtons[0];
+   newButton.setAttribute('onclick', 'FHJvLJ()');
+   toAddButton.appendChild(newButton);
+   
 }
 
 //Cutoff first rise
