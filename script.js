@@ -68,8 +68,10 @@ function blind(){
 function find(looking){
    const find = document.getElementById(looking);
 
-   if(find = null){
-      
+   if(find == null){
+      return false
+   } else {
+      return true 
    }
 }
 
@@ -104,14 +106,15 @@ function FHijackRFI(){
    }
 
    
-   if ()
+   if (find(RiseButtons[0]) == false ){
    var newButton = document.createElement('button');
    newButton.id = RiseButtons[0];
    newButton.className = 'mButton';
-   newButton.innerHTML = RiseButtons[0];
+   newButton.innerHTML = MainButtons[0];
    newButton.setAttribute('onclick', 'FHJvLJ()');
    toAddButton.appendChild(newButton);
-   
+   }
+   else {}
 }
 
 //Cutoff first rise
