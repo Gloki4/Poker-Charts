@@ -114,7 +114,9 @@ function FHijackRFI(){
    newButton.setAttribute('onclick', 'FHJvLJ()');
    toAddButton.appendChild(newButton);
    }
-   else {}
+   else {
+      document.getElementById(RiseButtons[0]).setAttribute('onclick', 'FHJvLJ()');
+   }
 }
 
 //Cutoff first rise
@@ -130,6 +132,30 @@ function FCutoffRFI(){
       document.getElementById(CutoffRFI[i]).classList.remove('square');
    }
 
+   if (find(RiseButtons[0]) == false ){
+      var newButton = document.createElement('button');
+      newButton.id = RiseButtons[0];
+      newButton.className = 'mButton';
+      newButton.innerHTML = MainButtons[0];
+      newButton.setAttribute('onclick', 'FCOvLJ()');
+      toAddButton.appendChild(newButton);
+      }
+      else {
+         document.getElementById(RiseButtons[0]).setAttribute('onclick', 'FCOvLJ()');
+      }
+
+   if (find(RiseButtons[1]) == false ){
+      var newButton = document.createElement('button');
+      newButton.id = RiseButtons[1];
+      newButton.className = 'mButton';
+      newButton.innerHTML = MainButtons[1];
+      newButton.setAttribute('onclick', 'FCOvHJ()');
+      toAddButton.appendChild(newButton);
+      }
+      else {
+         document.getElementById(RiseButtons[1]).setAttribute('onclick', 'FCOvHJ()');
+      }
+      
 }
 
 //Button first rise
@@ -178,6 +204,34 @@ function FHJvLJ(){
    for(var i=0; i < HJvLJ.length ; i++){
       document.getElementById(HJvLJ[i]).classList.add('rise');
       document.getElementById(HJvLJ[i]).classList.remove('square');
+   }
+}
+
+//Facing RFI Cutoff vs Lojack
+function FCOvLJ(){
+
+   for(var i=0; i < cards.length ; i++){
+      document.getElementById(cards[i]).classList.add('square');
+      document.getElementById(cards[i]).classList.remove('rise','limp');
+   }
+
+   for(var i=0; i < COvLJ.length ; i++){
+      document.getElementById(COvLJ[i]).classList.add('rise');
+      document.getElementById(COvLJ[i]).classList.remove('square');
+   }
+}
+
+//Facing RFI Cutoff vs Hijack
+function FCOvHJ(){
+
+   for(var i=0; i < cards.length ; i++){
+      document.getElementById(cards[i]).classList.add('square');
+      document.getElementById(cards[i]).classList.remove('rise','limp');
+   }
+
+   for(var i=0; i < COvHJ.length ; i++){
+      document.getElementById(COvHJ[i]).classList.add('rise');
+      document.getElementById(COvHJ[i]).classList.remove('square');
    }
 }
 
